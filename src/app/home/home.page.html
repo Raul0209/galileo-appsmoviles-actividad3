@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DivisApp 2800288490101
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mi conversor de divisas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    
+
+
+    <ion-list>
+
+      <ion-item>
+      <ion-radio-group [(ngModel)]="divisa" value="dolares">
+        <ion-radio value="dolares">Dolares</ion-radio><br />
+        <ion-radio value="euros">Euros</ion-radio><br />
+        <ion-radio value="pesoMexicano">Peso mexicano</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+
+      <ion-item>
+        <ion-input [(ngModel)]="montoEnQuetzales"  label="Monto en quetzales"></ion-input>
+      </ion-item>
+ 
+      <ion-item>
+      <ion-button (click)="convertirMontoQuetzales()">Convertir a quetzales</ion-button>
+    </ion-item>
+    
+      <ion-item>
+        <ion-input [(ngModel)]="montoConvertido" label="Monto en dolares" [disabled]="true"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
